@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepZone | Tienda de Zapatos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header class="navbar">
+        <div class="logo">StepZone</div>
+        <nav class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <button class="cart-btn" id="cartToggle">
+            🛒 Carrito (<span id="cartCount">0</span>)
+        </button>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <h1>Encuentra tu estilo a cada paso</h1>
+        <p>Explora nuestra nueva colección de zapatillas urbanas y deportivas.</p>
+    </section>
+
+    <!-- Catálogo de Zapatos -->
+    <main class="catalog">
+        <h2>Nuestros Productos</h2>
+        <div class="products-grid">
+            <!-- Zapato 1 -->
+            <div class="product-card" data-id="1" data-name="Zapatillas Run Max" data-price="89.99">
+                <img src="https://unsplash.com" alt="Zapatillas Run Max">
+                <h3>Zapatillas Run Max</h3>
+                <p class="price">$89.99</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+            <!-- Zapato 2 -->
+            <div class="product-card" data-id="2" data-name="Urban Classic" data-price="65.00">
+                <img src="https://unsplash.com" alt="Urban Classic">
+                <h3>Urban Classic White</h3>
+                <p class="price">$65.00</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+            <!-- Zapato 3 -->
+            <div class="product-card" data-id="3" data-name="Sport Pro Neon" data-price="110.00">
+                <img src="https://unsplash.com" alt="Sport Pro Neon">
+                <h3>Sport Pro Neon</h3>
+                <p class="price">$110.00</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal del Carrito (Oculto por defecto) -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <span class="close-btn" id="closeCart">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cartItems">
+                <!-- Se llena con JS -->
+                <p class="empty-message">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn">Proceder al pago</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
